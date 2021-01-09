@@ -8,7 +8,7 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
     let email = document.getElementById(idEmail).value;
     let emailConfirm = document.getElementById(idEmailConfirm).value;
     let password = document.getElementById(idPassword).value;
-    let passwordConfirm = document.getElementById(idPasswordConfirm).value;
+    let passwordConfirm = document.getElementById(idPasswordConfirm).value;   
     let age = document.getElementById(idAge).value;
     let children = document.getElementById(idChildren).value;
     let country = document.getElementById(idCountry).value;
