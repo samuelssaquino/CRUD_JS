@@ -11,10 +11,8 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
     let passwordConfirm = document.getElementById(idPasswordConfirm).value;
     let age = document.getElementById(idAge).value;
     let children = document.getElementById(idChildren).value;
-    let country = document.getElementById(idCountry).value;   
+    let country = document.getElementById(idCountry).value;
     let phone = document.getElementById(idPhone).value;
-
-
 
     if (title == "")
         alert("The field 'Title' is mandatory!");
@@ -37,7 +35,7 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
     else if (age == "")
         alert("The field 'Age' is mandatory!");
     else if (country == "")
-        alert("The field 'Country' is mandatory!");   
+        alert("The field 'Country' is mandatory!");
     else if (phone == "")
         alert("The field 'Phone' is mandatory!")
     else registerUser(title, firstName, lastName, email, emailConfirm,
@@ -59,7 +57,7 @@ function registerUser(title, firstName, lastName, email, emailConfirm,
         else users = JSON.parse(users);
         users.push(newUser); //Add a new user
         localStorage.setItem("users", JSON.stringify(users))
-        alert("The user "+ firstName + " " + lastName +" has been successfully registered!");
+        alert("The user " + firstName + " " + lastName + " has been successfully registered!");
         //atualizarTotalEstoque("totalEstoque");
         location.reload();
     }
