@@ -1,3 +1,8 @@
+window.onload = function () {
+    loadTable();
+    //document.getElementById('frmCadastro').addEventListener('submit', adicionarOuAlterar);
+    //document.getElementById('frmCadastro').addEventListener('submit', listar);
+}
 
 function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfirm, idPassword,
     idPasswordConfirm, idAge, idChildren, idCountry, idPhone) {
@@ -8,7 +13,7 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
     let email = document.getElementById(idEmail).value;
     let emailConfirm = document.getElementById(idEmailConfirm).value;
     let password = document.getElementById(idPassword).value;
-    let passwordConfirm = document.getElementById(idPasswordConfirm).value;   
+    let passwordConfirm = document.getElementById(idPasswordConfirm).value;
     let age = document.getElementById(idAge).value;
     let children = document.getElementById(idChildren).value;
     let country = document.getElementById(idCountry).value;
@@ -62,4 +67,42 @@ function registerUser(title, firstName, lastName, email, emailConfirm,
         location.reload();
     }
     else alert("A versao do seu navegador é muito antiga");
+}
+
+function loadTable() {
+    //if you don't have any local storage, do nothing
+    if (localStorage.getItem('users') === null)
+        return;
+
+    //capture the objects
+    var reg = JSON.parse(localStorage.getItem('users'));
+    var tbody = document.getElementById("tbodyResults");
+
+    //clean the body
+    tbody.innerHTML = '';
+
+    for (var i = 0; i < reg.length; i++) {
+        var id = reg[i]._Id,
+            title = reg[i]._title,
+            firstName = reg[i]._firstName,
+            lastName = reg[i]._lastName,
+            email = reg[i]._email,
+            age = reg[i]._age,
+            children = reg[i]._children,
+            country = reg[i]._country,
+            phone = reg[i]._phone
+
+        tbody.innerHTML += '<tr id="rowTable' + i + '">' +            
+            '<td>' + title + '</td>' +
+            '<td>' + firstName + '</td>' +
+            '<td>' + lastName + '</td>' +
+            '<td>' + email + '</td>' +
+            '<td>' + age + '</td>' +
+            '<td>' + children + '</td>' +
+            '<td>' + country + '</td>' +
+            '<td>' + phone + '</td>' +
+            '<td><button onclick="excluir(\'' + id + '\')">Delete</button></td>' +
+            '<td><button onclick="prepararAlterar(\'' + id + '\')">Edit</button></td>' +
+            '</tr>';
+    }
 }
