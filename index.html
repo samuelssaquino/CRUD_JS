@@ -24,167 +24,17 @@
         <div class="py-5 text-center ">
             <!-- <img class="d-block mx-auto mb-4" src="img/bootstrap-solid.svg" alt="" width="72" height="72"> -->
             <h2>USER REGISTRATION</h2>
-            <p class="lead"></p>
+            
         </div>
 
-        <div class="row">
-            <div class="col-md-12 order-md-1">
-                <h4 class="mb-1 text-center"></h4>
-                <form class="needs-validation" novalidate="">
-                    <div class="row">
-                        <div class="col-md-1 mb-3">
-                            <label for="title">Title</label>
-                            <select class="custom-select d-block w-100" id="title">
-                                <option value=""></option>
-                                <option value="Dr.">Dr.</option>
-                                <option value="Mr.">Mr.</option>
-                                <option value="Mrs.">Mrs.</option>
-                                <option value="Ms.">Ms.</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div>
-                        <div class="col-md-5 mb-3">
-                            <label for="firstName">First name</label>
-                            <input type="text" class="form-control" id="firstName">
-                            <div class="invalid-feedback">
-                                Valid first name is required.
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="lastName">Last name</label>
-                            <input type="text" class="form-control" id="lastName">
-                            <div class="invalid-feedback">
-                                Valid last name is required.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="email">Email <span class="text-muted"></span></label>
-                            <input type="email" class="form-control" id="email">
-                            <div class="invalid-feedback">
-                                Please enter a valid email address for shipping updates.
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 mb-3">
-                            <label for="cemail">Email Confirm <span class="text-muted"></span></label>
-                            <input type="email" class="form-control" id="cemail">
-                            <div class="invalid-feedback">
-                                Please enter a valid email address for shipping updates.
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 mb-3">
-                            <label for="password">Password <span class="text-muted"></span></label>
-                            <input type="password" class="form-control" id="password">
-                            <div class="invalid-feedback">
-                                Please enter a valid email address for shipping updates.
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 mb-3">
-                            <label for="cpassword">Password Confirm <span class="text-muted"></span></label>
-                            <input type="password" class="form-control" id="cpassword">
-                            <div class="invalid-feedback">
-                                Please enter a valid email address for shipping updates.
-                            </div>
-                        </div>
-
-                        <div class="row">
-
-                        </div>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-2 mb-3">
-                            <label>Gender</label>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input"
-                                    value="male">
-                                <label class="custom-control-label" for="customRadio1">Male</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input"
-                                    value="female">
-                                <label class="custom-control-label" for="customRadio2">Female</label>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 mb-3">
-                            <label for="age">Age</label>
-                            <input type="number" class="form-control" id="age" placeholder="0 - 100" required="true"
-                                min="0" max="99">
-                            <div class="invalid-feedback">
-                                Zip code required.
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 mb-3">
-                            <label for="children">Number of children</label>
-                            <select class="custom-select d-block w-100" id="children" required="true">
-                                <option value=""></option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Please select a valid country.
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="country">Country</label>
-                                <select class="custom-select d-block w-100" id="country">
-                                    <option value=""></option>
-                                    <option value="United States">United States</option>
-                                    <option value="Canada">Canada</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid country.
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="phone">Phone</label>
-                                <input type="text" class="form-control" id="phone">
-                                <div class="invalid-feedback">
-                                    Zip code required.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="mb-4">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="same-address">
-                        <label class="custom-control-label" for="same-address">I read and accept Terms of Service and Privacy Policy</label>
-                    </div>                   
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <hr class="mb-4">
-                            <input type="button" value="Save" class="btn btn-primary btn-lg btn-block" onclick="userValidation('title','firstName', 'lastName', 'email', 'cemail', 
-                                'password', 'cpassword', 'age', 'children', 'country', 'phone')">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <hr class="mb-4">
-                            <button class="btn btn-primary btn-lg btn-block" type="reset" value="Clean"
-                                onclick="userValidation('title')">Clean</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
+        <div class="py-5 text-center ">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#modalRegister">
+                Add User
+            </button>
         </div>
+
+
     </div>
 
     <div class="container">
@@ -192,11 +42,11 @@
             <div class="col-md-12">
                 <table id="tblDados" class="table table-hover">
                     <thead>
-                        <tr>                                                        
+                        <tr>
                             <th scope="col">Title</th>
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
-                            <th scope="col">Email</th>                                                         
+                            <th scope="col">Email</th>
                             <th scope="col">Age</th>
                             <th scope="col">Nº Children</th>
                             <th scope="col">Country</th>
@@ -206,6 +56,176 @@
                     <tbody id="tbodyResults">
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalRegister" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="modalRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalRegisterLabel">Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 order-md-1">
+                            <h4 class="mb-1 text-center"></h4>
+                            <form class="needs-validation" novalidate="">
+                                <div class="row">
+                                    <div class="col-md-1 mb-3">
+                                        <label for="title">Title</label>
+                                        <select class="custom-select d-block w-100" id="title">
+                                            <option value=""></option>
+                                            <option value="Dr.">Dr.</option>
+                                            <option value="Mr.">Mr.</option>
+                                            <option value="Mrs.">Mrs.</option>
+                                            <option value="Ms.">Ms.</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 mb-3">
+                                        <label for="firstName">First name</label>
+                                        <input type="text" class="form-control" id="firstName">
+                                        <div class="invalid-feedback">
+                                            Valid first name is required.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName">Last name</label>
+                                        <input type="text" class="form-control" id="lastName">
+                                        <div class="invalid-feedback">
+                                            Valid last name is required.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="email">Email <span class="text-muted"></span></label>
+                                        <input type="email" class="form-control" id="email">
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address for shipping updates.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cemail">Email Confirm <span class="text-muted"></span></label>
+                                        <input type="email" class="form-control" id="cemail">
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address for shipping updates.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="password">Password <span class="text-muted"></span></label>
+                                        <input type="password" class="form-control" id="password">
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address for shipping updates.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cpassword">Password Confirm <span class="text-muted"></span></label>
+                                        <input type="password" class="form-control" id="cpassword">
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address for shipping updates.
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-2 mb-3">
+                                        <label>Gender</label>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input" value="male">
+                                            <label class="custom-control-label" for="customRadio1">Male</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input" value="female">
+                                            <label class="custom-control-label" for="customRadio2">Female</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="age">Age</label>
+                                        <input type="number" class="form-control" id="age" placeholder="0 - 100"
+                                            required="true" min="0" max="99">
+                                        <div class="invalid-feedback">
+                                            Zip code required.
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3 mb-3">
+                                        <label for="children">Number of children</label>
+                                        <select class="custom-select d-block w-100" id="children" required="true">
+                                            <option value=""></option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid country.
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="country">Country</label>
+                                            <select class="custom-select d-block w-100" id="country">
+                                                <option value=""></option>
+                                                <option value="United States">United States</option>
+                                                <option value="Canada">Canada</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a valid country.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" class="form-control" id="phone">
+                                            <div class="invalid-feedback">
+                                                Zip code required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr class="mb-4">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="same-address">
+                                    <label class="custom-control-label" for="same-address">I read and accept Terms
+                                        of Service and
+                                        Privacy Policy</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="userValidation('title','firstName', 'lastName', 'email', 'cemail', 
+                'password', 'cpassword', 'age', 'children', 'country', 'phone')">Save</button>
+                </div>
             </div>
         </div>
     </div>
