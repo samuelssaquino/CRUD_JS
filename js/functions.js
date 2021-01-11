@@ -5,7 +5,7 @@ window.onload = function () {
 }
 
 function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfirm, idPassword,
-    idPasswordConfirm, idAge, idChildren, idCountry, idPhone) {
+    idPasswordConfirm, nameRadio, idAge, idChildren, idCountry, idPhone) {
 
     let title = document.getElementById(idTitle).value;
     let firstName = document.getElementById(idFirstName).value;
@@ -14,6 +14,7 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
     let emailConfirm = document.getElementById(idEmailConfirm).value;
     let password = document.getElementById(idPassword).value;
     let passwordConfirm = document.getElementById(idPasswordConfirm).value;
+    let sex = validateRadio(nameRadio);
     let age = document.getElementById(idAge).value;
     let children = document.getElementById(idChildren).value;
     let country = document.getElementById(idCountry).value;
@@ -44,16 +45,40 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
     else if (phone == "")
         alert("The field 'Phone' is mandatory!")
     else registerUser(title, firstName, lastName, email, emailConfirm,
-        password, passwordConfirm, age, children, country, phone);
+        password, passwordConfirm, sex, age, children, country, phone);
+}
+
+function validateRadio(gender) {
+
+    var valid = false;
+    var x = document.getElementsByName(gender);
+    var sex;
+
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].checked) {
+            valid = true;
+            sex = x[i].value;
+            return sex;
+            break;
+        }
+    }
+
+    if (valid) {
+        alert("Validation SEX Successful: " + sex);
+    } else {
+        alert("Please Select a SEX");
+        return false;
+    }
+
 }
 
 function registerUser(title, firstName, lastName, email, emailConfirm,
-    password, passwordConfirm, age, children, country, phone) {
+    password, passwordConfirm, sex, age, children, country, phone) {
 
     let newUser = {
         _title: title, _firstName: firstName, _lastName: lastName, _email: email,
         _emailConfirm: emailConfirm, _password: password, _passwordConfirm: passwordConfirm,
-        _age: age, _children: children, _country: country, _phone: phone
+        _sex: sex, _age: age, _children: children, _country: country, _phone: phone
     };
 
     if (typeof (Storage) !== "undefined") {
@@ -88,16 +113,18 @@ function loadTable() {
             lastName = reg[i]._lastName,
             email = reg[i]._email,
             age = reg[i]._age,
+            sex = reg[i]._sex,
             children = reg[i]._children,
             country = reg[i]._country,
             phone = reg[i]._phone
 
-        tbody.innerHTML += '<tr id="rowTable' + i + '">' +            
+        tbody.innerHTML += '<tr id="rowTable' + i + '">' +
             '<td>' + title + '</td>' +
             '<td>' + firstName + '</td>' +
             '<td>' + lastName + '</td>' +
             '<td>' + email + '</td>' +
             '<td>' + age + '</td>' +
+            '<td>' + sex + '</td>' +
             '<td>' + children + '</td>' +
             '<td>' + country + '</td>' +
             '<td>' + phone + '</td>' +
