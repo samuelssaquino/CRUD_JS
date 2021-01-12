@@ -24,7 +24,6 @@
         <div class="py-5 text-center ">
             <!-- <img class="d-block mx-auto mb-4" src="img/bootstrap-solid.svg" alt="" width="72" height="72"> -->
             <h2>USER REGISTRATION</h2>
-
         </div>
 
         <div class="py-5 text-center ">
@@ -45,7 +44,7 @@
                             <th scope="col">First Name</th>
                             <th scope="col">Last Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Age</th>
+                            <th scope="col">Date of Birth</th>
                             <th scope="col">Sex</th>
                             <th scope="col">Nº Children</th>
                             <th scope="col">Country</th>
@@ -161,16 +160,15 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3 mb-3">
-                                        <label for="age">Age</label>
-                                        <input type="number" class="form-control" id="age" placeholder="0 - 100"
-                                            required="true" min="0" max="99">
-                                        <div class="invalid-feedback">
-                                            Zip code required.
+
+                                    <div class="col-md-5 mb-3">
+                                        <div class="form-group">
+                                            <label for="">Date of birth</label>
+                                            <input id="dtBirth" type="date" class="form-control">
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3 mb-3">
+                                    <div class="col-md-5 mb-3">
                                         <label for="children">Number of children</label>
                                         <select class="custom-select d-block w-100" id="children" required="true">
                                             <option value=""></option>
@@ -189,24 +187,22 @@
                                             Please select a valid country.
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label for="country">Country</label>
-                                            <select class="custom-select d-block w-100" id="country">
-                                                <option value=""></option>
-                                                <option value="United States">United States</option>
-                                                <option value="Canada">Canada</option>
-                                            </select>
-                                            <div class="invalid-feedback">
-                                                Please select a valid country.
-                                            </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="country">Country</label>
+                                        <select class="custom-select d-block w-100" id="country">
+                                            <option value=""></option>
+                                            <option value="United States">United States</option>
+                                            <option value="Canada">Canada</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid country.
                                         </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="phone">Phone</label>
-                                            <input type="text" class="form-control" id="phone">
-                                            <div class="invalid-feedback">
-                                                Zip code required.
-                                            </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" class="form-control" id="phone">
+                                        <div class="invalid-feedback">
+                                            Zip code required.
                                         </div>
                                     </div>
                                 </div>
@@ -225,7 +221,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" onclick="userValidation('title','firstName', 'lastName', 'email', 'cemail', 
-                'password', 'cpassword', 'gender', 'age', 'children', 'country', 'phone')">Save</button>
+                'password', 'cpassword', 'gender', 'dtBirth', 'children', 'country', 'phone')">Save</button>
                 </div>
             </div>
         </div>
