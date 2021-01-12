@@ -128,8 +128,10 @@ function loadTable() {
             '<td>' + children + '</td>' +
             '<td>' + country + '</td>' +
             '<td>' + phone + '</td>' +
-            '<td><button onclick="excluir(\'' + id + '\')">Delete</button></td>' +
-            '<td><button onclick="prepararAlterar(\'' + id + '\')">Edit</button></td>' +
+            /* '<td><button onclick="excluir(\'' + id + '\')">Delete</button></td>' +
+            '<td><button onclick="prepararAlterar(\'' + id + '\')">Edit</button></td>' + */
+            '<td><button type="button" class="btn btn-primary"><i class="fa fa-edit" /></button></td>' +
+            '<td><button type="button" class="btn btn-danger"><i class="fa fa-trash" /></button></td>' +            
             '</tr>';
     }
 }
