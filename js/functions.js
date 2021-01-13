@@ -62,10 +62,14 @@ function validateRadio(gender) {
             sex = x[i].value;
             return sex;
             break;
-        } else {
-            sex = "";
-            return sex;
         }
+    }
+
+    if (valid) {
+        return sex;
+    } else {       
+        sex = ""; 
+        return sex;
     }
 }
 
