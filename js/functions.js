@@ -38,6 +38,8 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
         alert("The field 'Password Confirm' is mandatory!");
     else if (password != passwordConfirm)
         alert("Passwords are different, please enter the same passwords!");
+    else if (sex == "")
+        alert("The field 'Sex' is mandatory!");
     else if (dtBirth == "")
         alert("The field 'Date of Birth' is mandatory!");
     else if (country == "")
@@ -60,16 +62,11 @@ function validateRadio(gender) {
             sex = x[i].value;
             return sex;
             break;
+        } else {
+            sex = "";
+            return sex;
         }
     }
-
-    if (valid) {
-        alert("Validation SEX Successful: " + sex);
-    } else {
-        alert("Please Select a SEX");
-        return false;
-    }
-
 }
 
 function registerUser(title, firstName, lastName, email, emailConfirm,
@@ -131,7 +128,7 @@ function loadTable() {
             /* '<td><button onclick="excluir(\'' + id + '\')">Delete</button></td>' +
             '<td><button onclick="prepararAlterar(\'' + id + '\')">Edit</button></td>' + */
             '<td><button type="button" class="btn btn-primary"><i class="fa fa-edit" /></button></td>' +
-            '<td><button type="button" class="btn btn-danger"><i class="fa fa-trash" /></button></td>' +            
+            '<td><button type="button" class="btn btn-danger"><i class="fa fa-trash" /></button></td>' +
             '</tr>';
     }
 }
