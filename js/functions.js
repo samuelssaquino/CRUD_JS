@@ -38,6 +38,8 @@ function userValidation(idTitle, idFirstName, idLastName, idEmail, idEmailConfir
         alert("The field 'Password Confirm' is mandatory!");
     else if (password != passwordConfirm)
         alert("Passwords are different, please enter the same passwords!");
+    else if (password.length < 6)
+        alert("You have to enter at least 6 digit!");
     else if (sex == "")
         alert("The field 'Sex' is mandatory!");
     else if (dtBirth == "")
@@ -67,8 +69,8 @@ function validateRadio(gender) {
 
     if (valid) {
         return sex;
-    } else {       
-        sex = ""; 
+    } else {
+        sex = "";
         return sex;
     }
 }
